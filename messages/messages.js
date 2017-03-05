@@ -1,7 +1,7 @@
 var text = require('textbelt');
 var gcm = require('node-gcm');
 var sendmail = require('sendmail')();
-var config = require('./../config/config.js').values;
+var config = require('./../config/default.js').values;
 
 // functions in this file you want to expose
 var exports = module.exports = {};

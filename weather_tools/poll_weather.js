@@ -1,4 +1,4 @@
-var config = require("./../config/config.js").values;
+var config = require("./../config/default.js").values;
 var weather = require('weather-js');
 
 var exports = module.exports = {};

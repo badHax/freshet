@@ -1,8 +1,8 @@
 {
   "development":{
-    "username": "<user>",
-    "password": "<password>",
-    "database": "<db name>",
+    "username": "freshet_admin",
+    "password": "icui4cucanucme2",
+    "database": "freshet",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

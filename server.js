@@ -1,7 +1,7 @@
-var config = require("./config/config").values;
+var config = require("./config/default.js").values;
 var sms = require("./messages/messages.js")
 var weather_poll = require("./weather_tools/poll_weather.js");
-var db = require("./models/db.js")
+var db = require("./models")
 
 'use strict';
 const Hapi = require('hapi');
