@@ -1,5 +1,5 @@
 {
-  "name": "weathr",
+  "name": "freshet",
   "version": "0.0.0",
   "description": "A cross platform push notification server",
   "main": "server.js",
