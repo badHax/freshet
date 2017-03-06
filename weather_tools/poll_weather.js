@@ -12,21 +12,27 @@ var bad_weather = [// From MSN weather API list of conditions
         
     ];
 
-//gets a two day forecast 
+//gets the forecast for the next day
 var forecast = function(city,country){
     weather.find({search: city+","+country , degreeType: 'C'}, function(err, result) {
       if(err) console.log(err);
-      else return result[0].forecast[2];
+      else  {
+          return result[0].forecast[2].skycodeday;
+          
+      }
+      
+      //skycodeday
     });
 };
 
-//
-var will_rain = function(tomorrow){
-    if (bad_weather.indexOf(tomorrow.skycodeday.parseInt) != -1){
+//tomorrow : int (skycodeday)
+var will_rain = function(city,country){
+    var skycodeday = forecast(city,country);
+    if (bad_weather.indexOf(skycodeday) == -1){
           return true;
       }
      return false;
 };
 
-exports.will_rain = will_rain;
-exports.forecast = forecast;
+module.exports.will_rain = will_rain;
+module.exports.forecast = forecast;

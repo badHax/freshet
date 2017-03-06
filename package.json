@@ -1,6 +1,6 @@
 {
   "name": "freshet",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A cross platform push notification server",
   "main": "server.js",
   "repository": "https://github.com/badHax/weathr.git",
@@ -9,15 +9,14 @@
   "dependencies": {
     "async": "~0.2.8",
     "cron": "~1.2.1",
-    "express": "~3.2.4",
     "hapi": "~11.0.2",
     "mysql": "~2.13.0",
     "node-gcm": "~0.14.4",
-    "node-router": "~0.0.0",
-    "sendmail": "~1.1.1",
+    "nodemailer": "~2.3.0",
     "sequelize": "~3.30.2",
     "sequelize-cli": "^2.5.1",
-    "textbelt": "~0.0.0",
-    "weather-js": "~1.0.2"
+    "weather-js": "~1.0.2",
+    "messagebird":"~2.1.0",
+    "tape":"~0.0.0"
   }
 }

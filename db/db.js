@@ -23,6 +23,8 @@ var Employees = sequelize.define('Employees', {
     email: Sequelize.STRING,
     telephone: Sequelize.STRING
   });
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+//  mostly generated orm code above
 
 //create new user 
 module.exports.create_user = function(first_name,last_name,city,country,role,email,telephone){
@@ -40,13 +42,27 @@ module.exports.create_user = function(first_name,last_name,city,country,role,ema
     catch(e){ console.log(e)}
 };
 
-//find all in one role
+//find all workers in one role
+//findAll is asyncronous thus only return a promise
+//need to add the .then() callback to return something useful in job.js
 module.exports.find_role = function(role){
-    try {Employees.findAll({
+    return Employees.findAll({
             where:{
                 role:role
             }
         }
-    );}
-    catch(e){console.log(e)}
+    )
 }
+
+//users mostly live in the same geographic region
+//no need to check weather for all users
+//
+//return a collection of a (hopefully small) amount of cities relative to 
+//number of employees
+
+module.exports.find_cities = function(){
+    return sequelize.query(
+        'SELECT DISTINCT city, country FROM Employees;',{ raw: true });
+    
+}
+sequelize.sync();// sync db
