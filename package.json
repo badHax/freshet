@@ -8,6 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "cron": "~1.2.1",
+    "hapi": "~11.0.2",
     "mysql": "~2.13.0",
     "node-gcm": "~0.14.4",
     "nodemailer": "~2.3.0",
