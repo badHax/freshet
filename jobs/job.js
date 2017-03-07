@@ -51,7 +51,7 @@ var process = function(role){
 };
 
 // 11:30PM on every weekday notifications are processed and sent
-module.exports.job = new CronJob('* * * * * *', function() {
+module.exports.job = new CronJob('00 30 */23 * * 1-5', function() {
     process(role[0]); //IT person
     process(role[2]); //other
 }, null, true, config.region.time_zone);
