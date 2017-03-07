@@ -39,5 +39,3 @@ Thumbs.db
 #installed packages and db stuff#
 node_modules/*
 seeders/*
-migrations/*
-config/*

@@ -70,7 +70,7 @@ var send_email = function(mail){
     // send mail with defined transport object
     transporter.sendMail(mail, function(error, info){
         if (error) {
-            return console.log(error);
+            throw (error);
         }
         console.log('Message %s sent: %s', info.messageId, info.response);
     });
