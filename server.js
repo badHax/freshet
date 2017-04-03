@@ -52,6 +52,7 @@ app.get("/jobs", function(req, res){
 });
  /* serves add */
  app.post('/add', function(req, res) {
+     db.create_job(req.body.name,req.body.start,req.body.audience,req.body.frequency,req.body.end)
     console.log(req.body.date);
     res.sendfile('ui/index.html')
  });
@@ -60,4 +61,3 @@ app.get("/jobs", function(req, res){
  app.listen(port, function() {
    console.log("Listening on " + port);
  });
- 
